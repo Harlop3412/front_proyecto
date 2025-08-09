@@ -15,18 +15,20 @@ export default function Libreria() {
     }, []);
 
     console.log(libros)
-    console.log(TarjetaLibro)
+    libros.map((libro, i)=>{
+        console.log(libro, i)
+    })
     return (
         <section>
             <h2 className="text-center mb-4">texto de prueba</h2>
             <div className="row">
-                {libros.map((libro, i) => {
+                {libros.map((libro, i) => (
                     
                     <TarjetaLibro
                         key={i}
                         libro={libro}
                     />
-                })}
+                ))}
             </div>
         </section>
     )

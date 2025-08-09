@@ -1,5 +1,5 @@
 import './App.css'
-import Libreria from '../components/libreria'
+import Libreria from './components/libreria'
 
 function App() {
 
