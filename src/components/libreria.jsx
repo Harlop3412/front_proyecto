@@ -14,13 +14,13 @@ export default function Libreria() {
         loadLibros()
     }, []);
 
-    console.log(libros)
-    libros.map((libro, i)=>{
-        console.log(libro, i)
-    })
+    // console.log(libros)
+    // libros.map((libro, i)=>{
+    //     console.log(libro, i)
+    // })
     return (
         <section>
-            <h2 className="text-center mb-4">texto de prueba</h2>
+            <h2 className="text-center mb-4">Libros</h2>
             <div className="row">
                 {libros.map((libro, i) => (
                     
