@@ -5,7 +5,7 @@ import { getLibros } from "../services/fetch";
 export default function Libreria() {
     const [libros, setLibros] = useState([]);
 
-    const loadLibros = async ()=>{
+    const loadLibros = async () => {
         const data = await getLibros();
         setLibros(data);
     }
@@ -14,22 +14,20 @@ export default function Libreria() {
         loadLibros()
     }, []);
 
-    // console.log(libros)
-    // libros.map((libro, i)=>{
-    //     console.log(libro, i)
-    // })
+
     return (
-        <section>
-            <h2 className="text-center mb-4">Libros</h2>
-            <div className="row">
+
+
+        <section className="py-5 bg-primary text-white">
+            <h2 className="text-center mb-5 display-6 fw-bold">
+                Galeria Libros
+            </h2>
+            <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
                 {libros.map((libro, i) => (
-                    
-                    <TarjetaLibro
-                        key={i}
-                        libro={libro}
-                    />
+                    <TarjetaLibro key={i} libro={libro} />
                 ))}
             </div>
         </section>
+
     )
 }
